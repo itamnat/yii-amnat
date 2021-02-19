@@ -75,8 +75,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                             \yiister\gentelella\widgets\Menu::widget(
                                 [
                                     "items" => [
-                                        ["label" => "Dashboard", "url" => "site/index", "icon" => "home"],
-                                        ["label" => "สมุดโทรศัพท์", "url" => ["contacts/"], "icon" => "files-o"],
+                                        ["label" => "Dashboard", "url" => "index", "icon" => "home"],
+                                        ["label" => "สมุดโทรศัพท์", "url" => ["lists/"], "icon" => "files-o"],
                                         // ["label" => "Error page", "url" => ["site/error-page"], "icon" => "close"],
                                         ['label' => 'เข้าสู่ระบบ', 'icon' => 'fa fa-sign-in', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                                         //Admin
@@ -105,7 +105,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                             'url' => 'Javascript::void()',
                                             'items' =>
                                             [
-                                                ['label' => 'บุคคลากร', 'icon' => 'fa fa-bookmark-o', 'url' => ['/pscar/index'], 'visible' => (!Yii::$app->user->isGuest && Yii::$app->user->identity->leveled == '2')],
+                                                ['label' => 'บุคคลากร', 'icon' => 'fa fa-bookmark-o', 'url' => ['/contacts/index'], 'visible' => (!Yii::$app->user->isGuest && Yii::$app->user->identity->leveled == '2')],
                                                 ['label' => 'ตำแหน่ง', 'icon' => 'fa fa-bookmark-o', 'url' => ['/mapcar/index'], 'visible' => (!Yii::$app->user->isGuest && Yii::$app->user->identity->leveled == '2')],
                                                 ['label' => 'บันทึกการใช้รถ', 'icon' => 'fa fa-bookmark-o', 'url' => ['/usecar/index'], 'visible' => (!Yii::$app->user->isGuest && Yii::$app->user->identity->leveled == '3')],
                                                 ['label' => 'บันทึกตำบลเดินทาง', 'icon' => 'fa fa-bookmark-o', 'url' => ['/outcar/index'], 'visible' => (!Yii::$app->user->isGuest && Yii::$app->user->identity->leveled == '3')],
@@ -123,7 +123,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                             [
                                                 ['label' => 'ไฟล์ PDF', 'icon' => 'fa fa-circle-o', 'url' => ['/report/map']],
                                                 ['label' => 'ไฟล์ Excel', 'icon' => 'fa fa-circle-o', 'url' => ['/report/map']],
-                                            
+
                                             ],
                                             'visible' => !Yii::$app->user->isGuest
                                         ],
@@ -159,12 +159,12 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                             <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                         </a>
                         <?= Html::a(
-                                                    '',
-                                                    ['/site/logout'],
-                                                    ['data-method' => 'post', 'class' => 'glyphicon glyphicon-off']
-                                                ) ?>
+                            '',
+                            ['/site/logout'],
+                            ['data-method' => 'post', 'class' => 'glyphicon glyphicon-off']
+                        ) ?>
 
-                        
+
                     </div>
                     <!-- /menu footer buttons -->
                 </div>
@@ -178,6 +178,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                         <div class="nav toggle">
                             <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                         </div>
+
                         <?php if (!Yii::$app->user->isGuest) : ?>
                             <ul class="nav navbar-nav navbar-right">
 

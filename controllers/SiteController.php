@@ -12,7 +12,10 @@ use yii\helpers\Url;
 use yii2fullcalendar\yii2fullcalendar;
 use app\models\Contacts;
 use app\models\ContactsSearch;
+use app\models\Lists;
+use app\models\ListsSearch;
 use yii\data\ArrayDataProvider;
+// use app\controllers\ListsController;
 
 class SiteController extends MainController
 {
@@ -82,15 +85,15 @@ class SiteController extends MainController
     public function actionIndex()
     {
         
-        $searchModel = new ContactsSearch();
+        $searchModel = new ListsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        if (!Yii::$app->user->isGuest) {
+        // if (!Yii::$app->user->isGuest) {
      
-            $dataProvider->query->andwhere("dep_code='" . Yii::$app->user->identity->dep_code . "'");
-        } 
+        //     $dataProvider->query->andwhere("dep_code='" . Yii::$app->user->identity->dep_code . "'");
+        // } 
 
 
-        return $this->render('//contacts/lists', [
+        return $this->render('//lists/index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);

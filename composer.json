@@ -39,7 +39,9 @@
         "johnitvn/yii2-ajaxcrud": "*",
         "hail812/yii2-adminlte3": "*",
         "fedemotta/yii2-widget-datatables": "*",
-        "yiister/yii2-gentelella": "~1.0"
+        "yiister/yii2-gentelella": "~1.0",
+        "yiisoft/yii2-jui": "^2.0",
+        "keygenqt/yii2-autocomplete-ajax": "1.0.3"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

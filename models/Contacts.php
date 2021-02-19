@@ -81,16 +81,16 @@ class Contacts extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'fullname' => 'Fullname',
-            'position' => 'Position',
-            'dep_code' => 'Dep Code',
-            'email' => 'Email',
-            'tel' => 'Tel',
-            'fax' => 'Fax',
-            'tel_moi' => 'Tel Moi',
-            'mobile_fix' => 'Mobile Fix',
-            'mobile_phone' => 'Mobile Phone',
-            'image' => 'Image',
+            'fullname' => 'ชื่อ - สกุล',
+            'position' => 'ตำแหน่ง',
+            'dep_code' => 'ส่วนราชการ/หน่วยงาน',
+            'email' => 'E-mail',
+            'tel' => 'โทรศัพท์ (045)',
+            'fax' => 'โทรสาร (Fax)',
+            'tel_moi' => 'สื่อสาร (มท.)',
+            'mobile_fix' => 'ประจำตำแหน่ง',
+            'mobile_phone' => 'ส่วนตัว',
+            'image' => 'รูปภาพ',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'created_by' => 'Created By',
@@ -108,6 +108,9 @@ class Contacts extends \yii\db\ActiveRecord
         return @$this->hasOne(Department::className(), ['dep_id' => 'dep_code']);
     }
 
+    // public function getDepName() {
+    //     return @$this->level->level_name;
+    // }
 
     public function upload($model, $attribute)
     {

@@ -18,12 +18,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <h2><?= Html::encode($this->title) ?></h2>
 
     <p>
-       
+
     </p>
     <div class="x_panel">
-    <div class="x_title"><h2><i class="fa fa-laptop"></i> 
-    <?= Html::a('เพิ่มข้อมูล', ['create'], ['class' => 'btn btn-success']) ?>
-    </h2><div class="clearfix"></div></div>
+        <div class="x_title">
+            <h2><i class="fa fa-laptop"></i>
+                <?= Html::a('เพิ่มข้อมูล', ['create'], ['class' => 'btn btn-success']) ?>
+            </h2>
+            <div class="clearfix"></div>
+        </div>
         <div class="x_content">
             <?php // echo $this->render('_search', ['model' => $searchModel]); 
             ?>
@@ -34,16 +37,25 @@ $this->params['breadcrumbs'][] = $this->title;
                 'columns' => [
                     ['class' => 'yii\grid\SerialColumn'],
 
-                    'id',
+                    // 'id',
                     'fullname',
-                    'position',
-                    'dep_code',
-                    'email:email',
-                    //'tel',
-                    //'fax',
-                    //'tel_moi',
-                    //'mobile_fix',
-                    //'mobile_phone',
+                    [
+                        'attribute' => 'position',
+                        'contentOptions' => ['style' => 'white-space: nowrap;'],
+                    ],
+                    // 'position',
+                    // 'dep_code',
+                    // 'email:email',
+                    'tel',
+                    'fax',
+                    // 'tel_moi',
+                    [
+                        'attribute' => 'tel_moi',
+                        'contentOptions' => [ 'style' => 'text-align: center' ],
+
+                    ],
+                    'mobile_fix',
+                    // 'mobile_phone',
                     //'image',
                     //'created_at',
                     //'updated_at',
@@ -53,17 +65,14 @@ $this->params['breadcrumbs'][] = $this->title;
                     // ['class' => 'yii\grid\ActionColumn'],
                     [
                         'class' => 'yii\grid\ActionColumn',
-                        'template'=>'{copy} {view} {update} {delete}',
-                        'options'=> ['style'=>'width:100px;'],
-                        'contentOptions'=>[
-                          'noWrap' => true
+
+                        'template' => '{copy} {view} {update} {delete}',
+                        'options' => ['style' => 'width:100px;'],
+                        'contentOptions' => [
+                            'noWrap' => true
                         ],
-                        'buttons'=>[
-                          'copy' => function($url,$model,$key){
-                              return Html::a('<i class="glyphicon glyphicon-duplicate"></i>',$url);
-                            }
-                          ]
-                      ],
+
+                    ],
                 ],
             ]); ?>
 

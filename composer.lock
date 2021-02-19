@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab362b3aa0c84cd2100fbbbec6c2fe53",
+    "content-hash": "e44a2161b3525a16845de04682e77ee0",
     "packages": [
         {
             "name": "2amigos/yii2-date-picker-widget",
@@ -3515,6 +3515,60 @@
                 "source": "https://github.com/kartik-v/yii2-widgets/tree/master"
             },
             "time": "2018-10-09T17:40:19+00:00"
+        },
+        {
+            "name": "keygenqt/yii2-autocomplete-ajax",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/keygenqt/yii2-autocomplete-ajax.git",
+                "reference": "4ee198c4a832dd4e5d352c7cf1bbe82b438f8434"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/keygenqt/yii2-autocomplete-ajax/zipball/4ee198c4a832dd4e5d352c7cf1bbe82b438f8434",
+                "reference": "4ee198c4a832dd4e5d352c7cf1bbe82b438f8434",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-jui": "~2.0.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "keygenqt\\autocompleteAjax\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vitaliy Zarubin",
+                    "email": "keygenqt@gmail.com",
+                    "homepage": "http://keygenqt.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple way to search model id of the attributes model.",
+            "homepage": "http://keygenqt.com/work/yii2-autocomplete-ajax",
+            "keywords": [
+                "ajax",
+                "autocomplete",
+                "extension",
+                "jquery",
+                "plugin",
+                "widget",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/keygenqt/yii2-autocomplete-ajax/issues",
+                "source": "https://github.com/keygenqt/yii2-autocomplete-ajax/tree/master"
+            },
+            "time": "2020-05-28T01:30:47+00:00"
         },
         {
             "name": "maennchen/zipstream-php",
